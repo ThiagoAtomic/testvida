@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
+
+    <!-- Chamada da biblioteca em CSS do BootStrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Chamada da biblioteca em CSS interna -->
+    <link rel="stylesheet" href="css/biblioteca_estilos.css">
+
+
+    <script type="text/javascript" src="cadastrocliente.js"></script>
+
+    <!-- Chamada da biblioteca em JS do BootStrap-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</head>
+
+
+    <body onload="carregaradvogados()">
+    <table border="0" width="100%" class="menu">
+        <tr>
+            <td style="text-align: center"><a href="cadastroprocesso.html"> <img <td align="center">Cadastro de Processo</td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td style="text-align: center"><a href="loginadvogado.html">Portal Advogado</a></td>
+        </tr>
+
+    </table>
+
+    <table border="0" width="100%" class="menu">
+        <tr>
+            <td align="center"><a href="cadastroprocesso.html"> <img src="imagens/barra.png" width="100%"
+                        height="100%"></a> </td>
+        </tr>
+
+    </table>
+
+
+        <div class="container-fluid">
+            <div class="row">
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-2 div2"></div>
+                <div class="col-lg-8 col-md-8 col-sm-8 div2">
+                     <form>
+					  <h3 style="text-align: center;"><BR>CADASTRO DE CLIENTE</h3>
+
+                        <div class="form-row">
+							
+                            <BR>
+
+                            <div class="form-group col-12">
+                                <label for="inputNome">Nome do Cliente</label>
+                                <input id="nomecli" type="text" class="form-control" required>
+                            </div>
+							
+							<div class="form-group col-12">
+                                <label for="inputNome">Email do cliente</label>
+                                <input id="emailcli" type="email" class="form-control" required >
+                            </div>
+							
+							
+							<div class="form-group col-12">
+                                <label for="inputNome">Celular do cliente</label>
+                                <input id="celcli" type="text" class="form-control" required >
+                            </div>
+							
+							<div class="form-group col-12">
+								<div class="input-group-prepend">
+									<label for="inputLogin">LOGIN CLIENTE</label>
+								</div>
+									<input id="login" type="text" class="form-control" required>
+                            </div>
+							
+							<div class="form-group col-12">
+                                <label for="inputNome">Foto do Cliente</label>
+                                <input id="foto" type="text" class="form-control" >
+                            </div>
+							
+							
+							<!--<div class="form-group col-12">
+                                <label for="inputNome">Id Processo (caso haja)</label>
+                                <input id="idprocesso" value = "0" type="number" class="form-control" required >
+                            </div>
+							
+								<div class="row">
+							<<div class="col-2"></div>>-->
+							
+							<div class="form-group col-12">
+                                <label for="inputEmail4">Senha</label>
+                                <input id="txtsenha" type="password" class="form-control" required>
+                            </div>
+
+                            <div class="form-group col-12">
+                                <label for="inputEmail4">Confirme a Senha</label>
+                                <input id="txtsenhaconfirm" type="password" class="form-control" required>
+                            </div>
+							
+
+						<div class="row">
+                        <!--<<div class="col-2"></div>>-->
+                        <div class="col-12">
+                           <div class="input-group flex-nowrap">
+                              <div class="input-group-prepend">
+                                 <div class="input-group-text">
+                                 </div>
+                                 <span class="input-group-text" id="addon-wrapping">Selecione o Advogado</span>
+                              </div>
+                              <select id="idadvogado" class="custom-select">
+                              </select>
+                           </div>
+                        </div>
+                        <!--<<div class="col-2"></div>>-->
+                     </div>
+							
+                           
+
+                        </div>
+
+
+
+                            <BR>
+                            <p id="alertdata"></p>
+                            <button onclick="gravar()" type="button"
+                                class="btn btn-outline-dark btn-block btn-lg">Cadastrar Cliente</button>
+                            <BR>
+                        </div>
+
+
+                    </form>
+					
+					
+					
+                    <div class="col-lg-1 col-md-1 col-sm-1 div3"></div>
+                </div>
+
+            </div>
+
+
+    </body>
+
+</html>
